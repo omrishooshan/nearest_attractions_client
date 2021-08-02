@@ -1,0 +1,47 @@
+.btn {
+  border: none;
+  color: white;
+  border-radius: 0.2rem;
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.btn_attractions {
+  background-color: #fb981a;
+  text-decoration: none;
+}
+.btn_attractions:hover {
+  background-color: #ffb048;
+  box-shadow: 0px 15px 20px rgba(229, 144, 46, 0.4);
+  transform: translateY(-7px);
+}
+.btn_green {
+  background-color: #0fca80;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
+}
+.btn_green:hover {
+  background-color: #22f09d;
+}
+
+.heart{
+  position: absolute;
+    width: 1.6rem;
+    top: 1rem;
+    right: 1rem;
+    padding: .3rem;
+    border-radius: 50%;
+    background: white;
+    filter: drop-shadow(1px 2px 3px gray);
+}
+
+.heart:hover{
+  background: #ff7000;
+}
+
+.orange{
+  background: #ff7000;
+}

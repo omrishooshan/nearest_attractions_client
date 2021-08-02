@@ -1,0 +1,12 @@
+.content {
+  grid-column: full-start/full-end;
+  grid-row: 2/-1;
+
+  height: 92vh;
+  display: grid;
+}
+
+.content-container {
+  align-self: center;
+  justify-self: center;
+}

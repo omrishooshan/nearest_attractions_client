@@ -1,0 +1,63 @@
+.box {
+    display: flex;
+    height: 6rem;
+    position: relative;
+    font-family: Rubik,sans-serif;
+    border: 1px solid #eee;
+    border-top: none;
+    width: 100%;
+    border-radius: 2px 0 0 2px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    background-color: #ffffff;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+.box:hover{
+    box-shadow: 0 1px 6px 1px rgb(0 0 0 / 16%);
+}
+
+.img_wrap{
+    padding: .4rem;
+}
+.img_placeholder{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+
+.attraction_name{
+align-self: center;
+}
+.attraction_name::after{
+    /* content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5em;
+    border-top: 1px solid black;
+    z-index: -1; */
+    }
+.attraction_id{
+    border-right: 1px solid #0000001c;
+    align-self: center;
+    position: relative;
+    }
+
+    .attraction_id p::before{
+        content: "קוד אטרקציה";
+        color: #c9bfbf;
+    font-size: .8rem;
+    position: absolute;
+    width: 10rem;
+    bottom: 0;
+    right: 9px;
+    }
+    .attraction_distance{
+        border-right: 1px solid #0000001c;
+        align-self: center;
+        color: #ff7000;
+        margin-left: 1.5rem;
+        }

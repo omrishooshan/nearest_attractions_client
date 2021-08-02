@@ -1,0 +1,27 @@
+.types_box {
+    display: flex;
+    height: 3rem;
+    position: relative;
+    font-family: Rubik,sans-serif;
+    border: 1px solid #eee;
+    border-top: none;
+    width: 100%;
+    border-radius: 2px 0 0 2px;
+    margin-bottom: 3px;
+    background-color: #ffffff;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.types_ul{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, .3fr);
+    grid-template-rows: repeat(auto-fill, 26px);
+    grid-row-gap: .5em;
+    grid-column-gap: .5rem;
+    margin: 0;
+    padding: 0;
+    justify-items: legacy;
+    align-items: center;
+}

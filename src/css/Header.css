@@ -1,0 +1,47 @@
+.header {
+  box-shadow: 0 5px 6px 0 rgb(0 0 0 / 10%);
+  grid-column: full-start/full-end;
+  display: grid;
+
+  background: white;
+  justify-items: center;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+}
+ .header--a {
+  justify-self: start;
+  align-self: center;
+}
+.header--a-logo {
+  height: 6vh;
+  margin-right: 2rem;
+}
+.header--a-heart {
+  height: 1rem;
+ 
+}
+.favorits--a{
+  justify-self: self-end;
+  align-self: center;
+  text-decoration: none;
+  transform: translate(3rem, 2rem);
+  color: #3f3c3c;
+}
+
+.heart_widget{
+  background-color: #ff7000;
+  padding: 0.4rem;
+  font-size: .6875rem;
+  font-weight: 400;
+  font-family: Rubik,sans-serif;
+  position: absolute;
+  top: -3px;
+  right: -0.5rem;
+  width: auto;
+  line-height: 13px;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0 3.5px;
+  border-radius: 50%;
+}

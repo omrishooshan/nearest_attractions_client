@@ -1,23 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./css/App.css";
+import Header from "./Header";
+import Content from "./ContentRouter";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Content />
+      <div className="warning"><h1 className="warning_h1">שימו לב, האתר נבנה ע"י עמרי שושן והוא דוגמא בלבד</h1></div>
     </div>
   );
 }
