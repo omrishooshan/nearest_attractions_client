@@ -5,7 +5,9 @@ import "./css/AttractionsPage.css";
 import { useState } from "react";
 
 const AttractionsPage = () => {
-  const { data } = useFetch("http://localhost:3001/");
+  // const { data } = useFetch("http://localhost:3001/");
+  const { data } = useFetch("https://attractionserver.herokuapp.com/");
+  
   const { attractions, types } = data;
 
   const [filter, setFilter] = useState("הכל");
