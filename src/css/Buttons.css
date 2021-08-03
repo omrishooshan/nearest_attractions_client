@@ -28,22 +28,24 @@
 }
 
 .heart {
+  z-index: 9;
   position: absolute;
   width: 1.6rem;
   top: 1rem;
   right: 1rem;
   padding: 0.3rem;
   border-radius: 50%;
-  background: white;
   filter: drop-shadow(1px 2px 3px gray);
 }
 
-.heart:hover {
-  background: #ff7000;
+.blank{
+  background: white;
+  cursor: pointer;
 }
 
 .orange {
   background: #ff7000;
+  cursor: pointer;
 }
 
 
@@ -55,7 +57,7 @@
     right: 1rem;
     padding: 0.2rem;
     border-radius: 50%;
-    background: white;
     filter: drop-shadow(1px 2px 3px gray);
 }
 }
+

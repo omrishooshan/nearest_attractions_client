@@ -9,11 +9,16 @@ const FavoritesHeart = (props) => {
       ? false
       : true
   );
+
+  const handleClick=()=>{
+    props.clickFavorites()
+    setOrangeHeart(!orangeheart)
+  }
   return (
     <>
       <img
-        className={orangeheart ? "heart" : "heart orange"}
-        onClick={() => props.clickFavorites()}
+        className={orangeheart ? "heart blank" : "heart orange"}
+        onClick={handleClick}
         src={heart}
         alt="heart"
       />

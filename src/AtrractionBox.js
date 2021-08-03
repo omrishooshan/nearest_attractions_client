@@ -3,7 +3,11 @@ import imgPlaceholder from "./img_placeholder.jpg";
 import FavoritesHeart from "./FavoritesHeart";
 import { useDispatch } from "react-redux";
 
+
+
+
 const AtrractionBox = (props) => {
+
   const handleClick = () => {
     props.handleClick();
   };
@@ -33,11 +37,14 @@ const AtrractionBox = (props) => {
     // Save back to localStorage
     localStorage.setItem("favorits", existing.toString());
     // UPDATE WIDGET
+
   };
 
   return (
+    <div className="ee">
+          <FavoritesHeart Name={props.Name} clickFavorites={clickFavorites} />
     <div className="box" onClick={handleClick}>
-      <FavoritesHeart Name={props.Name} clickFavorites={clickFavorites} />
+
       <div className="img_wrap">
         <img
           src={imgPlaceholder}
@@ -54,6 +61,7 @@ const AtrractionBox = (props) => {
       <div className="attraction_distance">
         <p>&nbsp;&nbsp; {props.distance} ק"מ</p>
       </div>
+    </div>
     </div>
   );
 };
