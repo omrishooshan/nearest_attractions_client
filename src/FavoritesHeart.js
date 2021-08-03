@@ -4,11 +4,11 @@ import { useState } from "react";
 
 const FavoritesHeart = (props) => {
   const [orangeheart, setOrangeHeart] = useState(() =>
+    localStorage.getItem("favorits") &&
     localStorage.getItem("favorits").split(",").includes(props.Name)
       ? false
       : true
   );
-
   return (
     <>
       <img
