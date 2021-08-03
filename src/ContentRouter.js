@@ -5,26 +5,23 @@ import { useSelector } from "react-redux";
 import Home from "./Home";
 import AttractionsPage from "./AttractionsPage";
 
-
 function ContentRouter() {
-  const isUserLocationStored = useSelector((state) => state.isUserLocationStored);
+  const isUserLocationStored = useSelector(
+    (state) => state.isUserLocationStored
+  );
   return (
     <div className="content">
       <Switch>
         <Route exact path="/">
-        <Home/>
+          <Home />
         </Route>
         <Route path="/attractions">
-        {isUserLocationStored ?
-        <AttractionsPage/> 
-          :
-          <Redirect to="/"/>
-        }
+          {isUserLocationStored ? <AttractionsPage /> : <Redirect to="/" />}
         </Route>
-        <Route >
-        <Redirect to="/"/>
+        <Route>
+          <Redirect to="/" />
         </Route>
- </Switch>
+      </Switch>
     </div>
   );
 }

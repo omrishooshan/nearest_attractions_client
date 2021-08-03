@@ -1,6 +1,6 @@
 import "./css/AtrractionBox.css";
 import imgPlaceholder from "./img_placeholder.jpg";
-import FavoritesHeart from './FavoritesHeart'
+import FavoritesHeart from "./FavoritesHeart";
 import { useDispatch } from "react-redux";
 
 const AtrractionBox = (props) => {
@@ -10,37 +10,34 @@ const AtrractionBox = (props) => {
 
   const dipsatch = useDispatch();
 
-
-  const clickFavorites=()=>{
-    let existing = localStorage.getItem('favorits');
+  const clickFavorites = () => {
+    let existing = localStorage.getItem("favorits");
     // If no existing data, create an array
     // Otherwise, convert the localStorage string to an array
-    existing = existing ? existing.split(',') : [];
+    existing = existing ? existing.split(",") : [];
     //add attraction only if its not in the array allready
-    if(!existing.includes(props.Name)){
+    if (!existing.includes(props.Name)) {
       existing.push(props.Name);
       dipsatch({
         type: "INCREMENT_WIDGET",
       });
-    }
-    else{
+    } else {
       let index = existing.indexOf(props.Name);
-if (index !== -1) {
-  existing.splice(index, 1);
-}
+      if (index !== -1) {
+        existing.splice(index, 1);
+      }
       dipsatch({
         type: "DECREMENT_WIDGET",
       });
     }
     // Save back to localStorage
-localStorage.setItem('favorits', existing.toString());
-// UPDATE WIDGET
-
-  }
+    localStorage.setItem("favorits", existing.toString());
+    // UPDATE WIDGET
+  };
 
   return (
     <div className="box" onClick={handleClick}>
-    <FavoritesHeart Name={props.Name} clickFavorites={clickFavorites}/>
+      <FavoritesHeart Name={props.Name} clickFavorites={clickFavorites} />
       <div className="img_wrap">
         <img
           src={imgPlaceholder}
@@ -49,7 +46,7 @@ localStorage.setItem('favorits', existing.toString());
         />
       </div>
       <div className="attraction_name">
-        <p>{props.Name}</p>
+        <p className="attraction_name-p">{props.Name}</p>
       </div>
       <div className="attraction_id">
         <p> &nbsp;&nbsp;{props.VendorId} </p>

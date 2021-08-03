@@ -27,21 +27,21 @@
   background-color: #22f09d;
 }
 
-.heart{
+.heart {
   position: absolute;
-    width: 1.6rem;
-    top: 1rem;
-    right: 1rem;
-    padding: .3rem;
-    border-radius: 50%;
-    background: white;
-    filter: drop-shadow(1px 2px 3px gray);
+  width: 1.6rem;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem;
+  border-radius: 50%;
+  background: white;
+  filter: drop-shadow(1px 2px 3px gray);
 }
 
-.heart:hover{
+.heart:hover {
   background: #ff7000;
 }
 
-.orange{
+.orange {
   background: #ff7000;
 }

@@ -1,4 +1,4 @@
-html{
+html {
   background-color: #f9f9f9;
 }
 .App {
@@ -7,39 +7,63 @@ html{
   grid-template-rows: 8vh repeat(10, min-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start]
-    repeat(
-      8,
-      [col-start] minmax(min-content, 14rem) [col-end]
-    ) [center-end] minmax(6rem, 1fr) [full-end];
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 @media only screen and (max-width: 625px) {
   .App {
     grid-template-columns:
-      [menu-start] minmax(
-        min-content,
-        max-content
-      ) [menu-end full-start] minmax(1rem, 1fr) [center-start]
-      repeat(
-        8,
-        [col-start] minmax(min-content, 14rem) [col-end]
-      ) [center-end] minmax(1rem, 1fr) [full-end];
+      [menu-start] minmax(min-content, max-content)
+      [menu-end full-start] minmax(1rem, 1fr) [center-start]
+      repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(1rem, 1fr) [full-end];
   }
 }
 
-.warning{
+.warning {
   position: fixed;
   bottom: 1rem;
   left: 0;
   width: 8rem;
   height: 4rem;
   padding: 1rem;
-  background: #ff7000;;
+  background: #ff7000;
   box-shadow: 0 5px 6px 0 rgb(0 0 0 / 42%);
   border-radius: 3px;
 }
-.warning_h1{
-font-size: .8rem;
-color: white;
-text-align: center;
+.warning_h1 {
+  font-size: 0.8rem;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1087px) {
+  .warning {
+    top: 0;
+    left: 50%;
+    height: 2rem;
+    width: max-content;
+    z-index: 99;
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 745px) {
+  .warning {
+    top: 0;
+    left: 50%;
+    height: 1rem;
+    z-index: 99;
+    transform: translateX(-50%);
+    padding: 0;
+  }
+
+  .warning_h1 {
+    font-size: 0.6rem;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
 }

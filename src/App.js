@@ -6,7 +6,11 @@ function App() {
     <div className="App">
       <Header />
       <Content />
-      <div className="warning"><h1 className="warning_h1">שימו לב, האתר נבנה ע"י עמרי שושן והוא דוגמא בלבד</h1></div>
+      <div className="warning">
+        <h1 className="warning_h1">
+          שימו לב, האתר נבנה ע"י עמרי שושן והוא דוגמא בלבד
+        </h1>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@
   position: fixed;
   width: 100%;
 }
- .header--a {
+.header--a {
   justify-self: start;
   align-self: center;
 }
@@ -19,9 +19,8 @@
 }
 .header--a-heart {
   height: 1rem;
- 
 }
-.favorits--a{
+.favorits--a {
   justify-self: self-end;
   align-self: center;
   text-decoration: none;
@@ -29,12 +28,12 @@
   color: #3f3c3c;
 }
 
-.heart_widget{
+.heart_widget {
   background-color: #ff7000;
   padding: 0.4rem;
-  font-size: .6875rem;
+  font-size: 0.6875rem;
   font-weight: 400;
-  font-family: Rubik,sans-serif;
+  font-family: Rubik, sans-serif;
   position: absolute;
   top: -3px;
   right: -0.5rem;
@@ -44,4 +43,22 @@
   color: #fff;
   padding: 0 3.5px;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 498px) {
+  .header--a-logo {
+    height: 4vh;
+  }
+  .favorits--a {
+    transform: translate(2rem, 1.5rem);
+  }
+}
+
+@media only screen and (max-width: 367px) {
+  .favorits--a {
+    transform: translate(0.1rem, 1.5rem);
+  }
+  .favorits--a span {
+    font-size: 0.7rem;
+  }
 }

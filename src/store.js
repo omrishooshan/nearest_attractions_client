@@ -3,8 +3,10 @@ import { createStore, compose } from "redux";
 const initialState = {
   latitude: null,
   longitude: null,
-  isUserLocationStored:false,
-  widgetCounter:localStorage.getItem('favorits')?localStorage.getItem('favorits').split(',').length:0,
+  isUserLocationStored: false,
+  widgetCounter: localStorage.getItem("favorits")
+    ? localStorage.getItem("favorits").split(",").length
+    : 0,
 };
 
 function reducer(state = initialState, action) {
@@ -14,19 +16,19 @@ function reducer(state = initialState, action) {
         ...state,
         latitude: action.payload.latitude,
         longitude: action.payload.longitude,
-        isUserLocationStored:true
+        isUserLocationStored: true,
       };
 
     case "INCREMENT_WIDGET":
       return {
         ...state,
-        widgetCounter:state.widgetCounter+1,
+        widgetCounter: state.widgetCounter + 1,
       };
 
     case "DECREMENT_WIDGET":
       return {
         ...state,
-        widgetCounter:state.widgetCounter-1,
+        widgetCounter: state.widgetCounter - 1,
       };
 
     default:
