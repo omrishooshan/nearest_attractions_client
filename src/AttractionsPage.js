@@ -29,7 +29,7 @@ const AttractionsPage = () => {
             .filter((item) => {
               /* 3 filter conditions= 1-all/2-by atraction / 3-by favorite */
               if (filter === "אטרקציות שאהבתי") {
-                return localStorage
+                return localStorage.getItem("favorits") && localStorage
                   .getItem("favorits")
                   .split(",")
                   .includes(item.Name);

@@ -58,10 +58,20 @@
   margin-left: 1.5rem;
 }
 
+@media only screen and (max-width: 428px) {
+  .box {
+    justify-content: space-around;
+    }
+    .img_wrap {display: none;}
+
+}
 @media only screen and (max-width: 382px) {
+  
   .attraction_distance p,
   .attraction_name-p,
   .attraction_id p {
     font-size: 0.7rem;
   }
+ 
 }
+
